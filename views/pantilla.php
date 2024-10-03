@@ -14,5 +14,4 @@ if ($vista=="login" ||  $vista=="404") {
     include "./views/include/footer.php";
 }
 
-
 ?>
