@@ -1,3 +1,18 @@
+<style>
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .product-card .price {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .product-card .btn-primary {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+</style>
 <div id="detalle_producto" class="col-12 row m-0 container-fluid p-0">
             <h4 class="text-center">Detalles de Producto</h4>
             <div id="imagenes_productos" class="col-6 row m-0">

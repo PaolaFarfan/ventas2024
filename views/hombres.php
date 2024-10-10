@@ -72,7 +72,7 @@
                             <h2>WHITE</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
                             <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                             <h2>Hombre</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
                             <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                             <h2>W RENEW RUN 4</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
                             <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             <h2>Dark Shadow Black White</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto " class="btn btn-primary">Ver Detalles</a>
                             <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>

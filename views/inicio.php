@@ -141,7 +141,7 @@
                         </div>
                         <div class="text-center">
                             <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -157,8 +157,8 @@
                             <h2>W RENEW RUN 4</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -174,8 +174,8 @@
                             <h2>Dark Shadow Black White</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -191,8 +191,8 @@
                             <h2>BLANCO AIR WINFLO 9</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -208,8 +208,8 @@
                             <h2>KIDS FARID-G22</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -225,8 +225,8 @@
                             <h2>White/Sky blue</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -242,8 +242,8 @@
                             <h2>mujer 11,5 hombres 10</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -259,8 +259,8 @@
                             <h2>Puma whitw-alpine snow</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -276,8 +276,8 @@
                             <h2>diseño moderno en un estilo</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -293,8 +293,8 @@
                             <h2>Se inspira a la tradicion de puma</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -310,8 +310,8 @@
                             <h2> esta nueva era del baloncento </h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
