@@ -1,4 +1,26 @@
-<div class="container-fluid">
+
+<body>
+
+      <!-- Modal Promo-->
+    <div class="modal fade" id="discountModal" tabindex="-1" aria-labelledby="discountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                </div>
+                <div class="modal-body">
+                    <img src="./views/plantilla/logo_marca.png" alt="Logo">
+                    <h5 class="modal-title" id="discountModalLabel">¡20% de Descuento en Todos los Productos!</h5>
+                    <p>No te pierdas esta increíble oferta. ¡Aprovecha ahora!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="cerrarVentana();" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container-fluid">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"
@@ -60,8 +82,8 @@
                             <h2>WHITE</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
-                            <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>carrito" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +99,7 @@
                             <h2>Hombre</h2>
                         </div>
                         <div class="text-center">
-                            <a href="detalles_producto.html" class="btn btn-primary">Ver Detalles</a>
+                            <a href="<?php echo BASEE_URL ?>detalle-producto" class="btn btn-primary">Ver Detalles</a>
                             <a href="carrito.html" class="btn btn-success">Añadir a Carrito</a>
                         </div>
                     </div>
