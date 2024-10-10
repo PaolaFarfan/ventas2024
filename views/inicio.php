@@ -1,3 +1,44 @@
+<style>
+    .modal-header {
+        border-bottom: none;
+        position: relative;
+    }
+    .modal-header .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 1.5rem;
+        color: #000;
+    }
+    .modal-body {
+        text-align: center;
+        padding: 2rem;
+    }
+    .modal-body img {
+        max-height: 70px;
+        margin-bottom: 1rem;
+    }
+    .modal-body h5 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: #933A71;
+    }
+    .modal-body p {
+        font-size: 1.25rem;
+        color: #333;
+    }
+    .modal-footer {
+        border-top: none;
+        justify-content: center;
+    }
+    .modal-footer .btn {
+        background-color: #933A71;
+        border: none;
+        color: #fff;
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+</style>
 
 <body>
 
