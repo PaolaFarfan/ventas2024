@@ -6,7 +6,7 @@ class conexion{
         $mysql->set_charset(BD_CHARSET);
         if (mysqli_connect_errno()) {
             echo "Error de conexion:". 
-            mysqli_connect_errno():
+            mysqli_connect_errno();
         }
         return $mysql;
     }
