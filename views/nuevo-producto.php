@@ -4,8 +4,6 @@
         color: #fff;
         padding:10px 20px;
         border:none;
-        border radius:5px;
-        cursor:pointer;
     }
     button:hover{
         background-color:#3e8e41;
@@ -31,7 +29,7 @@
     </div>
     <div>
         <label for=""> Stock Inicio </label><br>
-            <input type="number" placeholder=""id="stock" name="stock"><br>
+            <input type="number" placeholder="" id="stock" name="stock"><br>
     </div>
     <div>
         <label for=""> Categoria </label><br>
@@ -39,21 +37,20 @@
     </div>
     <div>
         <label for=""> Fecha Vencimiento </label><br>
-            <input type="date" placeholder=""id="fecha" name="fecha_v"><br>
+            <input type="date" placeholder="" id="fecha_v" name="fecha_v"><br>
     </di>
     <div>
         <label for=""> Imagen </label><br>
-            <input type="text" placeholder=""id="imagen" name="imagen"><br>
+            <input type="text" placeholder=""  id="imagen" name="imagen"><br>
     </div>
     <div>
         <label for=""> Proveedor </label><br>
-            <input type="number" placeholder=""id="proveedor" name="proveedor"><br>
+            <input type="number" placeholder="" id="proveedor" name="proveedor"><br>
     </div> <br>
      <div>
-        <button type="sbutton" class="btn btn-succes"
-         onclick="registar_producto();
-         ">Registrar</button> 
+        <button type="button" class="btn btn-succes"
+         onclick="registrar_producto();">Registrar</button> 
 </div>
 </form>
 
-<script src="<?php echo BASE_URL;?>views/js/functions_producto.js"></script>
+<script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>
