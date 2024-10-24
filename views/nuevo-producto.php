@@ -54,3 +54,4 @@
 </form>
 
 <script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>
+<script> listar_categorias() ; </script>
