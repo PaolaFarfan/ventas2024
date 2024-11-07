@@ -1,1 +1,7 @@
 config.php
+asests/img_productos/*.jpg
+asests/img_productos/*.jpeg
+asests/img_productos/*.png
+asests/img_productos/*.avg
+asests/img_productos/*.web
+asests/img_productos/*.ico

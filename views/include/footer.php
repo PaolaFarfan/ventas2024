@@ -1,3 +1,4 @@
+
 <div id="footer" class="col-12" style="background:rgb(161, 177, 161); height: 100px; padding: 14px;">   
             <div class="container">
                 <div class="row">
@@ -56,28 +57,30 @@
                 </div>
             </div>
                 </div>
-            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
            <script>
-                $(document).ready(function(){
+        /*         $(document).ready(function(){
                     $("#discountModal").modal('show');
                 });
-                
+                 */
             </script>
             
             <script>
            
-                
+            /*     
                 function cerrarVentana(){
                     //la referencia de la ventana es el objeto window del popup. Lo utilizo para acceder al método close
                     $(document).ready(function(){
                     $("#discountModal").modal('hide');
                 });
-                }
+                }*/
                 </script>
-
+ 
      <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script src="<?php echo BASEE_URL; ?>views/js/jquery-3.6.0.min.js"></script>
 </body>
-</html>
+
+

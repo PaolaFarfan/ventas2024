@@ -47,7 +47,9 @@
     </div>
     <div>
         <label for=""> Proveedor </label><br>
-            <input type="number" placeholder="" id="proveedor" name="proveedor" class="form-control"><br>
+        <select type="number"  class="form-control" required id="idproveedor" name="idproveedor"> 
+                <option value=""> seleccione</option>
+            </select>
     </div> <br>
      <div>
         <button type="button" class="btn btn-succes"
@@ -57,3 +59,4 @@
 
 <script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>
 <script> listar_categorias() ; </script>
+<script> listar_proveedor() ; </script>
