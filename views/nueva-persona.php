@@ -119,7 +119,10 @@
 
             <div class="form-group">
                 <label for="rol">Rol:</label>
-                <input type="text" id="rol" name="rol" required>
+                <select name="rol" id="rol" required>>
+                    <option value="">seleccione</option>
+                </select>
+                
             </div>
 
             <div class="form-group">
@@ -130,8 +133,7 @@
             <div class="form-group">
                 <label for="estado">Estado:</label>
                 <select id="estado" name="estado" required>
-                    <option value="activo">Activo</option>
-                    <option value="inactivo">Inactivo</option>
+                <option value="">seleccione</option>
                 </select>
             </div>
 
@@ -140,7 +142,8 @@
                 <input type="date" id="fecha_reg" name="fecha_reg" required>
             </div>
 
-            <button type="submit">Registrar</button>
+            <button type="submit"  class="btn btn-succes"
+            onclick="registrar_producto();">Registrar</button>
         </form>
     </div>
     <script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>

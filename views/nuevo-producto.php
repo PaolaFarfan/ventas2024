@@ -34,7 +34,7 @@
     <div>
         <label for=""> Categoria </label><br>
         <select type="number"  class="form-control" required id="categoria" name="categoria"> 
-                <option value=""> seleccione</option>
+                <option value="">seleccione</option>
             </select>
     </div>
     <div>

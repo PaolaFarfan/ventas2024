@@ -3,7 +3,7 @@ require_once('../model/personaModel.php');
 
 $tipo = $_REQUEST['tipo'];
 
-// instanciar la clase categoria model
+// instanciar la clase persona model
 $objPersona = new personaModel();
 
 if ($tipo=="listar") {
@@ -12,7 +12,7 @@ if ($tipo=="listar") {
      $arr_Persona = $objPersona->obtener_categorias();
      
      if (!empty($arr_Persona)) {
-          // recordemos el array para agregar las opciones de las categorias
+          // recordemos el array para agregar las opciones de las personas
           for ($i=0; $i < count($arr_Persona); $i++) { 
                $id_persona = $arr_Persona[$i]-> id;
                $arr_Persona =$arr_Persona[$i]->nombre;
@@ -26,4 +26,4 @@ if ($tipo=="listar") {
 
 }
 
-?>
+?>-
