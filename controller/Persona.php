@@ -9,7 +9,7 @@ $objPersona = new personaModel();
 if ($tipo=="listar") {
      //respuesta
      $arr_Respuesta =array('status' =>false,'contenido'=>'');
-     $arr_Persona = $objPersona->obtener_categorias();
+     $arr_Persona = $objPersona->obtener_persona();
      
      if (!empty($arr_Persona)) {
           // recordemos el array para agregar las opciones de las personas
