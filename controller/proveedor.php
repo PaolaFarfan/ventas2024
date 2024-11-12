@@ -23,8 +23,6 @@ if ($tipo == "listar") {
         $arr_Respuesta['status'] = true;
         $arr_Respuesta['contenido'] = $arr_proveedores;
     }
-    
-
     echo json_encode($arr_Respuesta);
 }
 ?>

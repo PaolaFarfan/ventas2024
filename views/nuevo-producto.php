@@ -33,7 +33,7 @@
     </div>
     <div>
         <label for=""> Categoria </label><br>
-        <select type="number"  class="form-control" required id="idcategoria" name="idcategoria"> 
+        <select type="number"  class="form-control" required id="categoria" name="categoria"> 
                 <option value=""> seleccione</option>
             </select>
     </div>
@@ -43,11 +43,11 @@
     </di>
     <div>
         <label for=""> Imagen </label><br>
-            <input type="text" placeholder=""  id="imagen" name="imagen" class="form-control"><br>
+            <input type="file" placeholder=""  id="imagen" name="imagen" class="form-control"><br>
     </div>
     <div>
         <label for=""> Proveedor </label><br>
-        <select type="number"  class="form-control" required id="idproveedor" name="idproveedor"> 
+        <select type="number"  class="form-control" required id="proveedor" name="proveedor"> 
                 <option value=""> seleccione</option>
             </select>
     </div> <br>
@@ -58,5 +58,5 @@
 </form>
 
 <script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>
-<script> listar_categorias() ; </script>
-<script> listar_proveedor() ; </script>
+<script>listar_categorias();</script>
+<script>listar_proveedor();</script>

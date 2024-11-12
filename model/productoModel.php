@@ -10,13 +10,16 @@ function __construct()
 }
 
 
-    public function registrarProducto($codigo,$nombre,$detalle,$precio,$stock,
-    $categoria,$fecha_v,$imagen,$proveedor){
+    public function registrar_Producto($codigo,$nombre,$detalle,$precio,$stock,$categoria,$fecha_v,$imagen,$proveedor){
 
         $sql =$this->conexion->query
         ("CALL insertproducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$categoria}','{$fecha_v}','{$imagen}','{$proveedor}')");
         $sql = $sql-> fetch_object();
         return $sql;
+    }
+    public function actualizar_imagen($id, $imagen){
+        $sql = $this->conexion->query("UPDATE producto SET imagen='{$imagen}' WHERE id='{$id}'");
+        return 1;
     }
 }
 ?>

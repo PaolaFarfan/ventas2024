@@ -1,7 +1,7 @@
 <?php
 require_once "../librerias/conexion.php";
 
-class categoriaModel{
+class personaModel{
     private $conexion;
     
     public function obtener_categorias(){

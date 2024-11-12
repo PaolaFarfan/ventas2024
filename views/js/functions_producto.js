@@ -7,8 +7,8 @@ async function registrar_producto() {
     let categoria = document.querySelector('#categoria').value;
     let fecha_v = document.querySelector('#fecha_v').value;
     let imagen = document.querySelector('#imagen').value;
-    let provedor = document.querySelector('#proveedor').value;
-    if (codigo == "" || nombre == "" || detalle == "" || precio == "" || stock == "" || categoria == "" || fecha_v == "" || imagen == "" || provedor == "") {
+    let proveedor = document.querySelector('#proveedor').value;
+    if (codigo == "" || nombre == "" || detalle == "" || precio == "" || stock == "" || categoria == "" || fecha_v == "" || imagen == "" || proveedor == "") {
         alert("error, campos vacios");
         return;
     }
@@ -30,21 +30,21 @@ async function registrar_producto() {
 
         console.log(json);
     } catch (e) {
-        console.log("Oops, ocurrio un error" + e);
+        console.log("Oops, ocurrio un error" +e);
     }
 
 }
 
 async function listar_categorias() {
     try {
-        let respuesta = await fetch(base_url+'controller/Categoria.php?tipo=listar');
+        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=listar');
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
             let contenido_select = '<option value=""> Seleccione</option>';
 
             datos.forEach(element => {
-                contenido_select += '<option value="' + element.id + '">' + element.nombre + '</option>';
+                contenido_select += '<option value="'+ element.id +'">'+ element.nombre +'</option>';
                 // SE TRABAJA CON JQUERY
               /*   $('#categoria').append($('<option />',{
                     text:`${element.nombre}`,
@@ -52,13 +52,13 @@ async function listar_categorias() {
                 })); */
 
             });
-            document.getElementById('idcategoria').innerHTML = contenido_select;
+            document.getElementById('categoria').innerHTML = contenido_select;
 
         }
 
         console.log(respuesta);
     } catch (e) {
-        console.log("Error al cargar categorias"+e);
+        console.log("Error al cargar categoria" +e);
     }
 }
 
@@ -68,7 +68,7 @@ async function listar_categorias() {
 async function listar_proveedor() {
     try {
         let respuesta = await fetch(base_url + 'controller/proveedor.php?tipo=listar');
-        let json = await respuesta.json();
+        json = await respuesta.json();
         if (json.status) {
             let datos = json.contenido;
             let contenido_select = '<option value="">Seleccione</option>';
@@ -80,12 +80,12 @@ async function listar_proveedor() {
                     value: ${element.id}
                 }));*/
             });
-            document.getElementById('idproveedor').innerHTML = contenido_select;
+            document.getElementById('proveedor').innerHTML = contenido_select;
         }
 
         console.log(respuesta);
 
     } catch (e) {
-        console.log("Error al cargar proveedores: " + e);
+        console.log("Error al cargar proveedores: " +e);
     }
 }
