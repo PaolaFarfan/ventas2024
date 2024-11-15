@@ -1,29 +1,40 @@
 <?php
 require_once('../model/personaModel.php');
-
-$tipo = $_REQUEST['tipo'];
-
-// instanciar la clase persona model
+$tipo = $_REQUEST ['tipo'];
+# instacncion ña clase model producto
 $objPersona = new personaModel();
 
-if ($tipo=="listar") {
-     //respuesta
-     $arr_Respuesta =array('status' =>false,'contenido'=>'');
-     $arr_Persona = $objPersona->obtener_persona();
-     
-     if (!empty($arr_Persona)) {
-          // recordemos el array para agregar las opciones de las personas
-          for ($i=0; $i < count($arr_Persona); $i++) { 
-               $id_persona = $arr_Persona[$i]-> id;
-               $arr_Persona =$arr_Persona[$i]->nombre;
-               $opciones = '';
-               $arr_Persona[$i] ->options = $opciones;
-          }
-          $arr_Respuesta ['status'] = true;
-          $arr_Respuesta ['contenido'] = $arr_Persona;
-     }
-     echo  json_encode($arr_Respuesta);
+if ($tipo=="registrar") {
+    //print_r($_POST);
+    //echo $_FILES['imagen']['name'];
+    
+     if($_POST);
+    $nro_identidad= $_POST['nro_identidad'];
+    $razon_social= $_POST['razon_social'];
+    $telefono= $_POST['telefono'];
+    $correo= $_POST['correo'];
+    $departamento= $_POST['departamento'];
+    $provincia= $_POST['provincia'];
+    $distrito= $_POST ['distrito'];
+    $cod_postal= $_POST['cod_postal'];
+    $direccion= $_POST['direccion'];
+    $rol= $_POST['rol'];
+    $secure_password=password_hash($dni,PASSWORD_DEFAULT);
+
+    
+    if ($nro_identidad=="" || $razon_social=="" || $telefono=="" || $correo==""|| $departamento==""|| $provincia=="" || $distrito=="" || $cod_postal==""|| $direccion==""|| $rol==""|| $secure_password=="") {
+        $arr_Respuesta = array('status'=> false, 'mensaje'=>'error campos vacios');
+    }else {
+        $arrPersona= $objPersona->registrar_persona($nro_identidad, $razon_social, $telefono,$correo, $departamento, $provincia, $distrito, $cod_postal, $direccion, $rol, $secure_password);
+        if ($arrPersona-> id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' =>'registro exitoso');
+            //cargar archivos
+           
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje'=>'error al SUBIR producto');
+        }
+        echo json_encode($arr_Respuesta);
+    } 
 
 }
-
-?>-
+?>

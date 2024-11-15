@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,6 +74,8 @@
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo BASEE_URL ?>bebes">BEBES</a>
 					</li>
+                    <button> class="nav-item">
+                        <a  class="nav-link" onclick=""cerrar_sesion;>Cerrar Sesion</a></button>
 
 				</ul>
                     <form class="d-flex me-3" role="search">

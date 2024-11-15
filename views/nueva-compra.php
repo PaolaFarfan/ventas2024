@@ -1,7 +1,7 @@
 <h2>Registro de compra</h2>
     <form action="" method="post" id="fromCompras">
         <div>
-        <label for="producto_id">ID del Producto:</label><br>
+        <label for="id_producto">ID del Producto:</label><br>
         <input type="text" id="id_producto" name="producto_id" required><br><br>
         </div>
 
@@ -16,7 +16,7 @@
         </div>
 
         <div>
-        <label for="trabajador_id">ID del Trabajador:</label><br>
+        <label for="id_trabajador">ID del Trabajador:</label><br>
         <input type="text" id="id_trabajador" name="trabajador_id" required><br><br>
         </div>
 

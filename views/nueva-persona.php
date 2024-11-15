@@ -69,7 +69,7 @@
             background-color: #0056b3;
         }
     </style>
-<div class="form-container">
+<div class="form-container"id="frmPersona">
         <h2>Formulario de Registro de Usuario</h2>
         <form action="procesar_formulario.php" method="POST" id="form-group">
             <div class="form-group">
@@ -146,5 +146,5 @@
             onclick="registrar_producto();">Registrar</button>
         </form>
     </div>
-    <script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>
-<script>registrar_producto();</script>
+    <script src="<?php echo BASEE_URL?>views/js/functions_persona.js"></script>
+<script>registrar_producto();</script>  
