@@ -24,3 +24,5 @@
             onclick="registrar_compra();">Registrar</button>
 
     </form>
+    <script src="<?php echo BASEE_URL?>views/js/functions_compra.js"></script>
+    <script>registrar_compra();</script>

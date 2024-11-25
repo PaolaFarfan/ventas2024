@@ -143,8 +143,8 @@
             </div>
 
             <button type="submit"  class="btn btn-succes"
-            onclick="registrar_producto();">Registrar</button>
+            onclick="registrar_persona();">Registrar</button>
         </form>
     </div>
     <script src="<?php echo BASEE_URL?>views/js/functions_persona.js"></script>
-<script>registrar_producto();</script>  
+<script>registrar_persona();</script>  

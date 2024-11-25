@@ -1,5 +1,5 @@
 async function registrar_persona() {
-    let Nro_Identidad = document.getElementById('#').value;
+    let nro_identidad = document.getElementById('#nro_identidad').value;
     let razon_social = document.querySelector('#razon_social').value;
     let telefono = document.querySelector('#telefono').value;
     let correo = document.querySelector('#correo').value;
@@ -11,7 +11,7 @@ async function registrar_persona() {
     let rol = document.querySelector('#rol').value;
     let contraseña = document.querySelector('#password').value;
 
-    if ( Nro_Identidad == "" || razon_social == "" || telefono == "" || correo == "" || departamento == "" ||  provicincia == "" || distrito == "" || codPostal == "" | direccion == "" ||  rol == ""|| contraseña == "") {
+    if ( nro_identidad == "" || razon_social == "" || telefono == "" || correo == "" || departamento == "" ||  provicincia == "" || distrito == "" || codPostal == "" | direccion == "" ||  rol == ""|| contraseña == "") {
         alert("error, campos vacios");
         return;
     }try {

@@ -1,7 +1,7 @@
 <?php
 require_once('../model/personaModel.php');
 $tipo = $_REQUEST ['tipo'];
-# instacncion ña clase model producto
+# instacncion la clase model producto
 $objPersona = new personaModel();
 
 if ($tipo=="registrar") {

@@ -2,27 +2,34 @@
 require_once('../model/compraModel.php');
 
 $tipo = $_REQUEST['tipo'];
-
-// Instanciar la clase proveedorModel
 $objcompra = new compraModel();
 
 
 if ($tipo == "listar") {
-    // Respuestas
-    $arr_Respuesta = array('status' => false, 'contenido' => '');
-    $arr_compras = $objproveedor->obtener_compra();
-    
-    
-    if (!empty($arr_compras)) {
-        for ($i = 0; $i < count($arr_compras); $i++) {
-            $id_compra = $arr_compras[$i]->id;
-            $compra = $arr_compras[$i]->razon_social;
-            $opciones = '<a href="#" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
-            $arr_compras[$i]->opciones = $opciones; 
+        //print_r($_POST);
+    //echo $_FILES['imagen']['name'];    
+    if($_POST);
+    $id_producto= $_POST['id_producto'];
+    $cantidad= $_POST['cantidad'];
+    $precio= $_POST['precio'];
+    $id_trabajador= $_POST['id_trabajador'];
+
+
+    if ($id_producto=="" || $cantidad=="" || $precio=="" || $id_trabajador=="") {
+        $arr_Respuesta = array('status'=> false, 'mensaje'=>'error campos vacios');
+    }else {
+        $arrCompra= $objcompra->obtener_compra($id_producto, $cantidad, $precio ,$id_trabajador);
+        if ($arrCompra-> id > 0) {
+            $arr_Respuesta = array('status' => true, 'mensaje' =>'registro exitoso');
+            //cargar archivos
+           
+        } else {
+            $arr_Respuesta = array('status' => false, 'mensaje'=>'error al SUBIR producto');
         }
-        $arr_Respuesta['status'] = true;
-        $arr_Respuesta['contenido'] = $arr_compras;
-    }
-    echo json_encode($arr_Respuesta);
+        echo json_encode($arr_Respuesta);
+    } 
+
 }
+
+
 ?>

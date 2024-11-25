@@ -1,3 +1,34 @@
+async function listar_productos() { // recien agreado
+    try {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=listar');
+         let json =await respuesta.json();
+         if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item =>{
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila"+item.id;
+                cont+=1;
+                nueva_fila.innerHTML =`
+                <th>${cont}</th>
+                <td>${item.codigo}</td>
+                <td>${item.nombre}</td>
+                <td>${item.stock}</td>
+                <td>${item.categoria.nombre}</td>
+                <td>${item.id_proveedor}</td>
+                <td></td>
+                `;
+                document.querySelector('#tbl_producto').appendChild(nueva_fila);
+            });
+         }
+         console.log(json);
+    } catch (error) {
+        console.log("oops salio un error" + error);
+    }
+}
+if (document.querySelector('#tbl_producto')) {
+    listar_productos();
+} // hasta aqui
 async function registrar_producto() {
     let codigo = document.getElementById('codigo').value;
     let nombre = document.querySelector('#nombre').value;
@@ -35,18 +66,47 @@ async function registrar_producto() {
 
 }
 
+// lstar categoria
+async function listar_categoria() { // recien agreado
+    try {
+        let respuesta = await fetch(base_url+'controller/Categoria.php?tipo=registrar');
+         let json =await respuesta.json();
+         if (json.status) {
+            let datos = json.contenido;
+            let cont = 0;
+            datos.forEach(item =>{
+                let nueva_fila = document.createElement("tr");
+                nueva_fila.id = "fila"+item.id;
+                cont+=1;
+                nueva_fila.innerHTML =`
+                <th>${cont}</th>
+                <td>${item.nombre}</td>
+                <td>${item.detalle}</td>
+                <td></td>
+                `;
+                document.querySelector('#tbl_categoria').appendChild(nueva_fila);
+            });
+         }
+         console.log(json);
+    } catch (error) {
+        console.log("oops salio un error" + error);
+    }
+}
+if (document.querySelector('#tbl_categoria')) {
+    listar_categoria();
+} // hasta aqui
 async function listar_categorias() {
     try {
-        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=listar');
+        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=registrar');
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;
-            let contenido_select = '<option value=""> Seleccione</option>';
+            let contenido_select = '<option value="">Seleccione</option>';
 
             datos.forEach(element => {
                 contenido_select += '<option value="'+ element.id +'">'+ element.nombre +'</option>';
                 // SE TRABAJA CON JQUERY
-              /*   $('#categoria').append($('<option />',{
+                /*   $('#categoria').append($('<option />',{
                     text:`${element.nombre}`,
                     value:`${element.id}`
                 })); */
@@ -61,7 +121,6 @@ async function listar_categorias() {
         console.log("Error al cargar categoria" +e);
     }
 }
-
 
 // listar proveedor
 

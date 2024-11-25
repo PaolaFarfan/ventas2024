@@ -74,8 +74,8 @@
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo BASEE_URL ?>bebes">BEBES</a>
 					</li>
-                    <button> class="nav-item">
-                        <a  class="nav-link" onclick=""cerrar_sesion;>Cerrar Sesion</a></button>
+                 <!--    <button class="nav-item">
+                        <a  class="nav-link" onclick=""cerrar_sesion;>Cerrar Sesion</a></button>   para cerrar sesion--> 
 
 				</ul>
                     <form class="d-flex me-3" role="search">

@@ -9,13 +9,13 @@ async function registrar_compra() {
         return;
     }
     try {
-        const datos = new FormData(frmRegistrar);
+        const datos = new FormData(fromCompras);
         datos.append('id_producto', id_producto);
         datos.append('cantidad', cantidad);
         datos.append('precio', precio);
         datos.append('id_trabajador', id_trabajador);
 
-        let respuesta = await fetch(base_url+'controller/compra.php?tipo=registrar', {
+        let respuesta = await fetch(base_url+'controller/compra.php?tipo=listar', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',

@@ -7,9 +7,8 @@
         <textarea id="detalles" name="detalles" rows="4" cols="50" required></textarea><br><br>
 
         <button type="submit"  class="btn btn-succes"
-        onclick="registrar_categoria();">Registrar</button>
-    </form>
+        onclick="obtener_categorias();">Registrar</button>
 
-    
-    <script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script>
-    <script>registrar_categoria();</script>
+    </form>
+    <script src="<?php echo BASEE_URL?>views/js/functions_categoria.js"></script>
+    <script>listar_categorias();</script>

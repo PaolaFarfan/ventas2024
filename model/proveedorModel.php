@@ -3,7 +3,7 @@ require_once "../librerias/conexion.php";
 
 class proveedorModel {
     private $conexion;
-
+    
     function __construct() {
         $this->conexion = new Conexion();
         $this->conexion = $this->conexion->connect();
