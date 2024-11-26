@@ -18,7 +18,7 @@ if ($tipo == "listar") {
     if ($id_producto=="" || $cantidad=="" || $precio=="" || $id_trabajador=="") {
         $arr_Respuesta = array('status'=> false, 'mensaje'=>'error campos vacios');
     }else {
-        $arrCompra= $objcompra->obtener_compra($id_producto, $cantidad, $precio ,$id_trabajador);
+        $arrCompras= $objcompra->obtener_compra($id_producto, $cantidad, $precio ,$id_trabajador);
         if ($arrCompra-> id > 0) {
             $arr_Respuesta = array('status' => true, 'mensaje' =>'registro exitoso');
             //cargar archivos
