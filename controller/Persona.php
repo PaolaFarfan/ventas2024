@@ -4,7 +4,7 @@ $tipo = $_REQUEST ['tipo'];
 # instacncion la clase model producto
 $objPersona = new personaModel();
 
-if ($tipo=="registrar") {
+if ($tipo=="listar") {
     //print_r($_POST);
     //echo $_FILES['imagen']['name'];
     

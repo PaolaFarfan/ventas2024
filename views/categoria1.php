@@ -10,12 +10,12 @@
                 </tr>
             </thead>
             <tbody id="tbl_categoria">
-                 <td>1</td>
+                 <!-- <td>1</td>
                 <td>producto</td>
                 <td>manga larga</td>
                 <td>editar/eliminar</td> 
-            </tbody>
+            </tbody> -->
         </table>
     </div>
 </div>
-<script src="<?php echo BASEE_URL?>views/js/functions_producto.js"></script> 
+<script src="<?php echo BASEE_URL?>views/js/functions.categoria.js"></script> 

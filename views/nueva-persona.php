@@ -69,9 +69,8 @@
             background-color: #0056b3;
         }
     </style>
-<div class="form-container"id="frmPersona">
         <h2>Formulario de Registro de Usuario</h2>
-        <form action="procesar_formulario.php" method="POST" id="form-group">
+        <form action="" class="" id="frmPersona">  
             <div class="form-group">
                 <label for="numero_identidad">Número de Identidad:</label>
                 <input type="text" id="numero_identidad" name="numero_identidad" required>
@@ -119,10 +118,7 @@
 
             <div class="form-group">
                 <label for="rol">Rol:</label>
-                <select name="rol" id="rol" required>>
-                    <option value="">seleccione</option>
-                </select>
-                
+                <input type="text" id="rol" name="rol" required>   
             </div>
 
             <div class="form-group">
@@ -130,21 +126,9 @@
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <div class="form-group">
-                <label for="estado">Estado:</label>
-                <select id="estado" name="estado" required>
-                <option value="">seleccione</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="fecha_reg">Fecha de Registro:</label>
-                <input type="date" id="fecha_reg" name="fecha_reg" required>
-            </div>
-
-            <button type="submit"  class="btn btn-succes"
+            <button type="botton"  class="btn btn-succes"
             onclick="registrar_persona();">Registrar</button>
         </form>
     </div>
     <script src="<?php echo BASEE_URL?>views/js/functions_persona.js"></script>
-<script>registrar_persona();</script>  
+<!-- <script>registrar_persona();</script> -->

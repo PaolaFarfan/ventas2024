@@ -10,10 +10,10 @@ function __construct()
 }
 
 
-    public function registrar_persona($nro_identidad,$razon_social,$telefono,$correo,$departamento,$distrito,$codPostal,$direccion,$rol,$contraseña){
+    public function registrar_persona($nro_identidad,$razon_social,$telefono,$correo,$departamento,$distrito,$codPostal,$direccion,$rol, $password){
 
         $sql =$this->conexion->query
-        ("CALL insertpersona('{$nro_identidad}','{$razon_social}','{$telefono}','{$correo}','{$departamento}','{$distrito}','{$codPostal}','{$direccion}','{$rol}'),'{$contraseña}')");
+        ("CALL insertpersona('{$nro_identidad}','{$razon_social}','{$telefono}','{$correo}','{$departamento}','{$distrito}','{$codPostal}','{$direccion}','{$rol}'),'{ $password}')");
         $sql = $sql-> fetch_object();
         return $sql;
     }

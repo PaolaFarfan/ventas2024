@@ -66,38 +66,9 @@ async function registrar_producto() {
 
 }
 
-// lstar categoria
-async function listar_categoria() { // recien agreado
-    try {
-        let respuesta = await fetch(base_url+'controller/Categoria.php?tipo=registrar');
-         let json =await respuesta.json();
-         if (json.status) {
-            let datos = json.contenido;
-            let cont = 0;
-            datos.forEach(item =>{
-                let nueva_fila = document.createElement("tr");
-                nueva_fila.id = "fila"+item.id;
-                cont+=1;
-                nueva_fila.innerHTML =`
-                <th>${cont}</th>
-                <td>${item.nombre}</td>
-                <td>${item.detalle}</td>
-                <td></td>
-                `;
-                document.querySelector('#tbl_categoria').appendChild(nueva_fila);
-            });
-         }
-         console.log(json);
-    } catch (error) {
-        console.log("oops salio un error" + error);
-    }
-}
-if (document.querySelector('#tbl_categoria')) {
-    listar_categoria();
-} // hasta aqui
 async function listar_categorias() {
     try {
-        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=registrar');
+        let respuesta = await fetch(base_url + 'controller/Categoria.php?tipo=listar');
         json = await respuesta.json();
         if (json.status){
             let datos = json.contenido;

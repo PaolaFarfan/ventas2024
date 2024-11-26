@@ -53,11 +53,13 @@ if ($tipo == "registrar") {
             $arrProducto = $objProducto->registrar_Producto($codigo, $nombre, $detalle, $precio, $stock, $categoria, $fecha_v, $imagen, $proveedor);
 
             if ($arrProducto->id > 0) {
+                $newid = $arrProducto->id_n;
                 $arr_Respuesta = array('statud' => true, 'mensaje' => 'Registro Existoso');
                 // carga archivos
                 $archivo = $_FILES['imagen']['tmp_name'];
                 $destino = './assets/img_productos/';
                 $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
+                
 
                 $nombre = $arrProducto->id . "." . $tipoArchivo;
                 if (move_uploaded_file($archivo, $destino . $nombre)) {
