@@ -3,12 +3,10 @@
         <table class="table table-striped table-hover table-bordered">
             <thead class="thead-warning">
                 <tr>
-                    <th>Nro</th>
-                    <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Stock</th>
-                    <th>Categoría</th>
-                    <th>Proveedor</th>
+                    <th>id_producto	</th>
+                    <th>cantidad</th>
+                    <th>precio</th>
+                    <th>id_trabajador</th>
                     <th>Acciones</th>
                 </tr>
             </thead>

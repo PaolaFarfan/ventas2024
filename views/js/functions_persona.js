@@ -1,6 +1,6 @@
 async function listar_persona() { // recien agreado
     try {
-        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=registrar');
+        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=listar');
          let json =await respuesta.json();
          if (json.status) {
             let datos = json.contenido;
@@ -16,7 +16,13 @@ async function listar_persona() { // recien agreado
                 <td>${item.telefono}</td>
                 <td>${item.correo}</td>
                 <td>${item.departamento}</td>
-                <td>${item.departamento}</td>
+                <td>${item.provincia}</td>
+                <td>${item.distrito}</td>
+                <td>${item.cod_postal}</td>
+                <td>${item.direccion}</td>
+                <td>${item.rol}</td>
+                <td>${item.password}</td>
+                <td>${item.options}</td>
                 <td></td>
                 `;
                 document.querySelector('#tbl_persona').appendChild(nueva_fila);
@@ -28,7 +34,7 @@ async function listar_persona() { // recien agreado
     }
 }
 if (document.querySelector('#tbl_persona')) {
-    listar_categoria();
+    listar_persona();
 } // hasta aqui
 
 

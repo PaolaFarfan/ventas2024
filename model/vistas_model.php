@@ -3,7 +3,7 @@ session_start();
 class vistaModelo{
 
     protected static function obtener_vista($vista){
-        $palabras_permitidas =['usuarios','nuevo-usuario','usuario', 'producto','mujeres','hombres','niños','bebes','megusta','carrito','detalle-producto','inicio','nuevo-producto','nueva-persona','nueva-categoria','nueva-compra','producto1','categoria1','persona1'];
+        $palabras_permitidas =['usuarios','nuevo-usuario','usuario', 'producto','mujeres','hombres','niños','bebes','megusta','carrito','detalle-producto','inicio','nuevo-producto','nueva-persona','nueva-categoria','nueva-compra','producto1','categoria1','persona1','compra1'];
        /*       
         if (isset($_SESSION['sesion_ventas_id'])) {
             return "login";

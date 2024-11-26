@@ -1,10 +1,35 @@
 <?php
 require_once('../model/personaModel.php');
+
+$objPersona = new personaModel();
 $tipo = $_REQUEST ['tipo'];
 # instacncion la clase model producto
 $objPersona = new personaModel();
 
-if ($tipo=="listar") {
+//instancio el clase modelopersona
+if ($tipo == "listar") {
+
+  //respuesta
+  $arr_Respuesta = array('status' => false, 'contenido' => '');
+  $arr_persona = $objPersona->obtener_persona();
+  if (!empty($arr_persona)) {
+    // recordemos el array para agregar las opciones de las personas
+    for ($i = 0; $i < count($arr_persona); $i++) {
+      $id_persona = $arr_persona[$i]->id;
+      $r_persona = $objPersona->obtener_persona($id_persona);
+      $arr_persona[$i]->persona = $r_persona;
+
+    }
+    $arr_Respuesta['status'] = true;
+    $arr_Respuesta['contenido'] = $arr_persona;
+    #code...
+  }
+  echo json_encode($arr_Respuesta);
+}
+
+
+
+if ($tipo=="registrar") {
     //print_r($_POST);
     //echo $_FILES['imagen']['name'];
     
