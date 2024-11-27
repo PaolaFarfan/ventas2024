@@ -1,3 +1,4 @@
+//funcion para listar personas
 async function listar_persona() { // recien agreado
     try {
         let respuesta = await fetch(base_url+'controller/Persona.php?tipo=listar');

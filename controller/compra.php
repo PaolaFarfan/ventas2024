@@ -1,11 +1,33 @@
 <?php
 require_once('../model/compraModel.php');
 
-$tipo = $_REQUEST['tipo'];
-$objcompra = new compraModel();
+# instacncion la clase model producto
+$objCompra = new compraModel();
+$tipo = $_REQUEST ['tipo'];
 
-
+//instancio el clase modelopersona
 if ($tipo == "listar") {
+
+  //respuesta
+  $arr_Respuesta = array('status' => false, 'contenido' => '');
+  $arr_compra = $objCompra->obtener_compra();
+  if (!empty($arr_compra)) {
+    // recordemos el array para agregar las opciones de las personas
+    for ($i = 0; $i < count($arr_compra); $i++) {
+      $id_compra = $arr_compra[$i]->id;
+      $r_compra = $objCompra->obtener_compra($id_compra);
+      $arr_compra[$i]->compra = $r_compra;
+
+    }
+    $arr_Respuesta['status'] = true;
+    $arr_Respuesta['contenido'] = $arr_compra;
+    #code...
+  }
+  echo json_encode($arr_Respuesta);
+}
+
+//para registrar la compra
+if ($tipo == "registar") {
         //print_r($_POST);
     //echo $_FILES['imagen']['name'];    
     if($_POST);
@@ -13,7 +35,6 @@ if ($tipo == "listar") {
     $cantidad= $_POST['cantidad'];
     $precio= $_POST['precio'];
     $id_trabajador= $_POST['id_trabajador'];
-
 
     if ($id_producto=="" || $cantidad=="" || $precio=="" || $id_trabajador=="") {
         $arr_Respuesta = array('status'=> false, 'mensaje'=>'error campos vacios');

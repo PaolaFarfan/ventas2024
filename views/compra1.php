@@ -3,10 +3,11 @@
         <table class="table table-striped table-hover table-bordered">
             <thead class="thead-warning">
                 <tr>
+                    <th>id</th>
                     <th>id_producto	</th>
                     <th>cantidad</th>
-                    <th>precio</th>
                     <th>id_trabajador</th>
+                    <th>precio</th>
                     <th>Acciones</th>
                 </tr>
             </thead>

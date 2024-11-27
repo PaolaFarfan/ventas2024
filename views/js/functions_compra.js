@@ -34,6 +34,8 @@ async function registrar_compra() {
         console.log("Oops, ocurrió un error " + e);
     }
 }
+
+//funcion para crear la lista de compra
 async function listar_compra() {
     try{
       let respuesta = await fetch(base_url+'controller/compra.php?tipo=listar');
@@ -50,9 +52,8 @@ async function listar_compra() {
                     <th>${cont}</th>
                     <td>${item.id_producto}</td>
                     <td>${item.cantidad}</td>
-                    <td>${item.precio}</td>
                     <td>${item.id_trabajador}</td>
-                    <td>${item.Acciones}</td>
+                    <td>${item.precio}</td>
                     <td>${item.options}</td>
                     
              `;
@@ -65,5 +66,5 @@ async function listar_compra() {
     } 
  }
  if (document.querySelector('#tbl_compra')){
-    listar_categorias();
+    listar_compra();
  }
