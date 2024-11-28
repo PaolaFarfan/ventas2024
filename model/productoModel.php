@@ -30,5 +30,10 @@ public function obtener_productos(){
         $sql = $this->conexion->query("UPDATE producto SET imagen='{$imagen}' WHERE id='{$id}'");
         return 1;
     }
+    public function verProducto($id){
+        $sql = $this->conexion->query("SELECT * FROM producto WHERE id='$id");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
 }
 ?>
