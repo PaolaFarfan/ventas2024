@@ -44,7 +44,7 @@ if ($tipo=="registrar") {
     $cod_postal= $_POST['cod_postal'];
     $direccion= $_POST['direccion'];
     $rol= $_POST['rol'];
-    $secure_password=password_hash($dni,PASSWORD_DEFAULT);
+    $secure_password=password_hash($nro_identidad,PASSWORD_DEFAULT);
 
     
     if ($nro_identidad=="" || $razon_social=="" || $telefono=="" || $correo==""|| $departamento==""|| $provincia=="" || $distrito=="" || $cod_postal==""|| $direccion==""|| $rol==""|| $secure_password=="") {

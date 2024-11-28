@@ -58,7 +58,7 @@ async function registrar_persona() {
     }try {
         const datos = new FormData(frmPersona); // capturamos datos del formulario html
         // enviar datos hacia el controlador
-        let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=listas', {
+        let respuesta = await fetch(base_url + 'controller/Persona.php?tipo=registrar', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',

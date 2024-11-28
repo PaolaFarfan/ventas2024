@@ -15,7 +15,7 @@ async function registrar_compra() {
         datos.append('precio', precio);
         datos.append('id_trabajador', id_trabajador);
 
-        let respuesta = await fetch(base_url+'controller/compra.php?tipo=listar', {
+        let respuesta = await fetch(base_url+'controller/compra.php?tipo=registrar', {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
