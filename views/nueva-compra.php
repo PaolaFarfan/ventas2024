@@ -1,4 +1,4 @@
-<h2>Registro de compra</h2>
+<h2>Nueva compra</h2>
     <form action="" method="post" id="fromCompras">
         <div>
         <label for="id_producto">ID del Producto:</label><br>

@@ -1,4 +1,4 @@
-<h2>Formulario de Categoria</h2>
+<h2>Nueva Categoria</h2>
     <form action="" class="" id="frmRegistrar">  
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>

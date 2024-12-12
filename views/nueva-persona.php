@@ -69,7 +69,7 @@
             background-color: #0056b3;
         }
     </style>
-        <h2>Formulario de Registro de Usuario</h2>
+        <h2>Registrar Nuevo Usuario</h2>
         <form action="" class="" id="frmPersona">  
             <div class="form-group">
                 <label for="numero_identidad">Número de Identidad:</label>

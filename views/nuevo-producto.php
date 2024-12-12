@@ -9,6 +9,7 @@
         background-color:#3e8e41;
     }
 </style>
+<h2>Registrar Nuevo Producto</h2>
 <form action="" class="" id="frmRegistrar">  
 
 <div>
