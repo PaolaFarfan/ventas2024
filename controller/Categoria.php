@@ -18,6 +18,11 @@ if ($tipo == "listar") {
       $r_categoria = $objcategoria->obtener_categorias($id_categoria);
       $arr_categoria[$i]->categoria = $r_categoria;
 
+      $id_categoria = $arr_categoria[$i]->id; // Obtener el id
+      $nombre_categoria = $arr_categoria[$i]->nombre; // Obtener el nombre (sin sobrescribir el array)
+      $opciones = '<a href="'.BASEE_URL.'editar-categoria'.$id_categoria.'">Editar</a>       <button onclick="eliminar_producto('.$id_categoria.');">Eliminar</button>'; // Asignar opciones vacías
+      $arr_categoria[$i]->options = $opciones; // Agregar las opciones al objeto actual
+
 
     }
     $arr_Respuesta['status'] = true;
@@ -59,6 +64,7 @@ if ($tipo == "registrar") {
       }
     }
     
+  
 ?>
 
 

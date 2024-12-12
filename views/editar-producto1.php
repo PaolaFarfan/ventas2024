@@ -39,7 +39,7 @@
     </div> <br>
      <div>
         <button type="button" class="btn btn-succes"
-         onclick="registrar_producto();">Registrar</button> 
+         onclick="registrar_producto();">Editar</button> 
 </div>
 </form>
 

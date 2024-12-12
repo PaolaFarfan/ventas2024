@@ -20,9 +20,7 @@ public function obtener_productos(){
 
 }
     public function registrar_Producto($codigo,$nombre,$detalle,$precio,$stock,$categoria,$fecha_v,$imagen,$proveedor){
-
-        $sql =$this->conexion->query
-        ("CALL insertproducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$categoria}','{$fecha_v}','{$imagen}','{$proveedor}')");
+        $sql =$this->conexion->query("CALL insertproducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$categoria}','{$fecha_v}','{$imagen}','{$proveedor}')");
         $sql = $sql-> fetch_object();
         return $sql;
     }
@@ -35,5 +33,21 @@ public function obtener_productos(){
         $sql = $sql->fetch_object();
         return $sql;
     }
+    public function actualizarProducto($id,$codigo,$nombre,$detalle,$precio,
+    $categoria,$imagen,$proveedor,$tipoArchivo){
+
+        $sql =$this->conexion->query ("CALL actualizarProducto('{$id}','{$nombre}','{$detalle}','{$precio}',
+        '{$categoria}','{$imagen}','{$proveedor}','{$tipoArchivo}')");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
+    public function eliminar_producto($id){
+        $sql =$this->conexion->query ("CALL eliminar_producto('{$id}')");
+        $sql = $sql->fetch_object();
+        return $sql;
+        
+    
+    }
 }
+
 ?>

@@ -74,6 +74,10 @@
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo BASEE_URL ?>bebes">BEBES</a>
 					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="<?php echo BASEE_URL ?>administrador">Administrador</a>
+					</li>
+                    
                  <!--    <button class="nav-item">
                         <a  class="nav-link" onclick=""cerrar_sesion;>Cerrar Sesion</a></button>   para cerrar sesion--> 
 

@@ -22,7 +22,7 @@ if ($tipo == "listar") {
 
             $id_producto = $arr_Productos[$i]->id; // Obtener el id
             $nombre_producto = $arr_Productos[$i]->nombre; // Obtener el nombre (sin sobrescribir el array)
-            $opciones = '<a href="'.BASEE_URL.'editar-producto'.$id_producto.'">Editar</a>       <button onclick="eliminar_producto('.$id_producto.');">Eliminar</button>'; // Asignar opciones vacías
+            $opciones = '<a href="'.BASEE_URL.'editar-producto'.$id_producto.'">Editar</a> <button onclick="eliminar_producto('.$id_producto.');">Eliminar</button>'; // Asignar opciones vacías
             $arr_Productos[$i]->options = $opciones; // Agregar las opciones al objeto actual
         }
         $arr_Respuesta['status'] = true;
@@ -94,6 +94,16 @@ if ($tipo == "ver") {
 if ($tipo == "actualizar") {
   /*   print_r($_POST); */
 }
+
 if ($tipo == "eliminar") {
-    /* print_r($_POST); */
+    /*   print_r($_POST); */
+    $id_producto =$_POST['id_producto'];
+    $arr_Respuesta = $objProducto->eliminar_producto($id_producto);
+   /*  print_r($arr_Respuesta); */
+   if (empty($arr_Respuesta)) {
+       $response =array('status' => false);
+   }else{
+    $response = array('status' => true );
+   }
+   echo json_encode($response);
 }

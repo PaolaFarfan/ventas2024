@@ -18,6 +18,14 @@ if ($tipo == "listar") {
       $r_compra = $objCompra->obtener_compra($id_compra);
       $arr_compra[$i]->compra = $r_compra;
 
+
+
+      $id_compra = $arr_compra[$i]->id; // Obtener el id
+      $nombre_compra = $arr_compra[$i]->nombre; // Obtener el nombre (sin sobrescribir el array)
+      $opciones = '<a href="'.BASEE_URL.'editar-compra'.$id_compra.'">Editar</a>       <button onclick="eliminar_compra
+      ('.$id_compra.');">Eliminar</button>'; // Asignar opciones vacías
+      $arr_compra[$i]->options = $opciones; // Agregar las opciones al objeto actual
+
     }
     $arr_Respuesta['status'] = true;
     $arr_Respuesta['contenido'] = $arr_compra;
