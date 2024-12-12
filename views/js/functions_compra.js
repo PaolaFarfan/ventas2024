@@ -68,3 +68,25 @@ async function listar_compra() {
  if (document.querySelector('#tbl_compra')){
     listar_compra();
  }
+ async function ver_compra(id) {
+    const formData = new FormData();
+    formData.append('id_compra', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/compra.php?tipo=ver',{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData 
+        });
+        json =await respuesta.json();
+        if (json.status) {
+            document.querySelector('#id_producto').value= json.contenido.codigo;
+        }else{
+            window.location = base_url+"compras";
+        }
+        console.log(json);
+        
+    } catch (error) {
+        console.log("oops ocurrio un error" +error);
+    }
+}

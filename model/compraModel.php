@@ -27,8 +27,11 @@ class compraModel{
         $sql = $sql-> fetch_object();
         return $sql;
     }
+
+public function vercompra($id){
+    $sql = $this->conexion->query("SELECT * FROM compras WHERE id='$id");
+    $sql = $sql->fetch_object();
+    return $sql;
 }
-
-
-
+}
 ?>

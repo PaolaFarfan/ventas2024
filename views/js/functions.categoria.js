@@ -61,3 +61,25 @@ if(json.status){
     }
 
 }
+async function ver_categoria(id) {
+    const formData = new FormData();
+    formData.append('id_categoria', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Categoria.php?tipo=ver',{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData 
+        });
+        json =await respuesta.json();
+        if (json.status) {
+            document.querySelector('#nombre').value= json.contenido.codigo;
+        }else{
+            window.location = base_url+"categoria";
+        }
+        console.log(json);
+        
+    } catch (error) {
+        console.log("oops ocurrio un error" +error);
+    }
+}

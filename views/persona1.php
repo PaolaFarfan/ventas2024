@@ -3,7 +3,8 @@
         <table class="table table-striped table-hover table-bordered">
             <thead class="thead-warning">
                 <tr>
-                    <th>nro_identidad	</th>
+                    <th>Nro</th>
+                    <th>nro_identidad</th>
                     <th>razon_social</th>
                     <th>telefono</th>
                     <th>correo</th>

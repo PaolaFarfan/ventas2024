@@ -42,7 +42,7 @@ public function obtener_productos(){
         return $sql;
     }
     public function eliminar_producto($id){
-        $sql =$this->conexion->query ("CALL eliminar_producto('{$id}')");
+        $sql =$this->conexion->query ("CALL eliminarproducto('{$id}')");
         $sql = $sql->fetch_object();
         return $sql;
         

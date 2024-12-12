@@ -1,0 +1,34 @@
+<h2>Nueva compra</h2>
+    <form action="" method="post" id="fromCompras">
+        <div>
+        <label for="id_producto">ID del Producto:</label><br>
+        <input type="text" id="id_producto" name="producto_id" required><br><br>
+        </div>
+
+        <div></div>
+        <label for="cantidad">Cantidad:</label><br>
+        <input type="number" id="cantidad" name="cantidad" required><br><br>
+        </div>
+
+        <div>
+        <label for="precio">Precio:</label><br>
+        <input type="number" id="precio" name="precio"  required><br><br>
+        </div>
+
+        <div>
+        <label for="id_trabajador">ID del Trabajador:</label><br>
+        <input type="text" id="id_trabajador" name="trabajador_id" required><br><br>
+        </div>
+
+        <button type="submit"  class="btn btn-succes"
+            onclick="registrar_compra();">Registrar</button>
+
+    </form>
+    <script src="<?php echo BASEE_URL?>views/js/functions_compra.js"></script>
+    <script>registrar_compra();</script>
+    <script >
+    
+    //https://paola.programacion2024.com/
+    const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1'];  ?>;
+    ver_compra(id_p);
+    </script>

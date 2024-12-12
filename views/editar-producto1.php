@@ -1,4 +1,4 @@
-<h2>formulario de editar producto</h2>
+<h2> Editar producto </h2>
 <form action="" class="" id="frmactualizar">  
 <div>
         <label for=""> Codigo </label> <br>
@@ -27,10 +27,6 @@
         <label for=""> Fecha Vencimiento </label><br>
             <input type="date" placeholder="" id="fecha_v" name="fecha_v" class="form-control"><br>
     </di>
-    <div>
-        <label for=""> Imagen </label><br>
-            <input type="file" placeholder=""  id="imagen" name="imagen" class="form-control"><br>
-    </div>
     <div>
         <label for=""> Proveedor </label><br>
         <select type="number"  class="form-control" required id="proveedor" name="proveedor"> 

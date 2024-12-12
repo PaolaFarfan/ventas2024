@@ -76,6 +76,26 @@ async function registrar_persona() {
         console.log("Oops, ocurrio un error" +e);
     }
 
-    
-    
+}
+async function ver_persona(id) {
+    const formData = new FormData();
+    formData.append('id_persona', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Persona.php?tipo=ver',{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: formData 
+        });
+        json =await respuesta.json();
+        if (json.status) {
+            document.querySelector('#numero_identidad').value= json.contenido.codigo;
+        }else{
+            window.location = base_url+"persona";
+        }
+        console.log(json);
+        
+    } catch (error) {
+        console.log("oops ocurrio un error" +error);
+    }
 }

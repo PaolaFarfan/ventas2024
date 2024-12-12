@@ -19,6 +19,13 @@ if ($tipo == "listar") {
       $r_persona = $objPersona->obtener_persona($id_persona);
       $arr_persona[$i]->persona = $r_persona;
 
+
+      
+      $id_persona = $arr_persona[$i]->id; // Obtener el id
+  /*     $nombre_persona = $arr_persona[$i]->nombre; // Obtener el nombre (sin sobrescribir el array) */
+      $opciones = '<a href="'.BASEE_URL.'editar-persona'.$id_persona.'">Editar</a> <button onclick="eliminar_persona('.$id_persona.');">Eliminar</button>'; // Asignar opciones vacías
+      $arr_persona[$i]->options = $opciones; // Agregar las opciones al objeto actual
+
     }
     $arr_Respuesta['status'] = true;
     $arr_Respuesta['contenido'] = $arr_persona;

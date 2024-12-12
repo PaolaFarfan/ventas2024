@@ -12,4 +12,9 @@
     </form>
     <script src="<?php echo BASEE_URL?>views/js/functions_categoria.js"></script>
    <!--  <script>registrar_categorias();</script> -->
-     
+   <script >
+
+//https://paola.programacion2024.com/
+const id_p=<?php $pagina=explode("/", $_GET['views']); echo $pagina['1'];  ?>;
+ver_categoria(id_p);
+</script>

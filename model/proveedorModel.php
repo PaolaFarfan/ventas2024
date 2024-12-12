@@ -18,6 +18,7 @@ class proveedorModel {
         }
         return $arrRespuesta;
     }
+    
 }
 ?>
 
