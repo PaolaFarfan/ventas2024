@@ -56,19 +56,19 @@
     <div class="producto">
         <div class="productos">
             <p>Registrar Nuevo Producto</p>
-            <a href="<?php echo BASEE_URL ?>nuevo-producto" class="btn btn-primary">Ver Nuevo Registro</a>
+            <a href="<?php echo BASEE_URL ?>producto1" class="btn btn-primary">Ver Nuevo Registro</a>
         </div>
         <div class="productos">
             <p>Registrar Nueva Persona/Usuario</p>
-            <a href="<?php echo BASEE_URL ?>nueva-persona" class="btn btn-primary">Ver Nueva Persona</a>
+            <a href="<?php echo BASEE_URL ?>persona1" class="btn btn-primary">Ver Nueva Persona</a>
         </div>
         <div class="productos">
             <p>Registrar Nueva Categoría</p>
-            <a href="<?php echo BASEE_URL ?>nueva-categoria" class="btn btn-primary">Ver Nueva Categoria</a>
+            <a href="<?php echo BASEE_URL ?>categoria1" class="btn btn-primary">Ver Nueva Categoria</a>
         </div>
         <div class="productos">
             <p>Registrar Nueva Compra/Venta</p>
-            <a href="<?php echo BASEE_URL ?>nueva-compra" class="btn btn-primary">Ver Nueva Compra</a>
+            <a href="<?php echo BASEE_URL ?>compra1" class="btn btn-primary">Ver Nueva Compra</a>
         </div>
     </div>
     <br><br>
